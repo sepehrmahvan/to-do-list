@@ -1,0 +1,100 @@
+body{
+    font-family: sans-serif;
+    user-select: none;
+    div.to-do-list{
+        height: 92vh;
+        border-radius: 15px;
+        background-color: white;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        overflow: scroll;
+        scrollbar-width: 0;
+        h1{
+            font-size: 40px;
+            letter-spacing: 14px;
+            font-family: "fair Display";
+            margin: 25px 0;
+            display: block;
+            span{
+                color: darkgray;
+            }
+        }
+        form{
+            input{
+                width: 60%;
+                border-radius: 10px;
+                padding: 15px;
+                margin: 25px 10px;
+                font-style: italic;
+                border: 2px solid #0DCAF0;
+                background-color: white;
+            }
+            span{
+                border-radius: 10px;
+                width: 31%;
+                padding: 15px 20px;
+                margin: 10px 10px;
+                background-color: #0DCAF0;
+                border: 2px solid #0DCAF0;
+                transition: 250ms ease;
+                color: white;
+                font-size: 1vw;
+                letter-spacing: 4px;
+                cursor: pointer;
+            }
+            span:hover{
+                background-color: white;
+                color: black !important;
+            }
+        }
+        p{
+            text-align: center;
+            color: black;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+        ul{
+           margin-top: 20px;   
+           li{
+            text-align: center;
+            font-size: 18px;
+            cursor: pointer;
+            width: 45%;
+            display: inline-block;
+            padding: 10px 0px;
+            color: rgb(78, 78, 78);
+            font-weight: 600;
+            border: 2px solid darkgray;
+            border-radius: 5px;
+            margin: 15px 0;
+            box-shadow: 0 0 5px darkgray ;
+            letter-spacing: 2px;
+            animation-name: fade;
+            animation-duration: .5s;
+            animation-iteration-count: 1;
+           } 
+           @keyframes fade {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 100%;
+            }
+           }
+           @keyframes done {
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 100%;
+            }
+           }
+        }
+    }
+    div.to-do-list::-webkit-scrollbar{
+        display: none;
+    }
+}
